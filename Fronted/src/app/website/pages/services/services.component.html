@@ -1,0 +1,57 @@
+<section id="servicios">
+  <div id="mensaje" *ngIf="mostrarNotificacion">
+    <p-messages [(value)]="msgs1" [enableService]="false"></p-messages>
+  </div>
+  
+  <section>
+    <article class="contenido">
+      <h1 class="title">Programa tu cita</h1>
+
+      <!-- <div class="p-fluid p-grid p-formgrid"> -->
+      <div class="container">
+        <!-- <div class="p-field-col p-col-12 p-md-4"> -->
+        <div class="row">
+          <div class="col-sm" style="display: flex; flex-direction: column; align-items: center;">
+            <h2>Selecciona la fecha de tu cita</h2>
+            <p-calendar
+              [(ngModel)]="fecha"
+              [inline]="true"
+              [disabledDates]="invalidDates"
+              [disabledDays]="[0, 6]"
+              [minDate]="valFechaMinima"
+              [maxDate]="valFechaMaxima"
+              dateFormat="yyyy/mm/dd"
+              [readonlyInput]="true"
+              inputId="disabledays"
+            ></p-calendar>
+          </div>
+          
+          <div class="col-sm" style="display: flex; flex-direction: column; align-items: center;">
+            <h2>Hora</h2>
+            <p-dropdown
+              [options]="hourAppointment"
+              [(ngModel)]="hour"
+              placeholder="Hora"
+              [group]="true"
+              class="dropwdown-hora"
+            >
+              <ng-template let-group pTemplate="group">
+                <div class="p-d-flex p-ai-center">
+                  <span>{{ group.label }}</span>
+                </div>
+              </ng-template>
+            </p-dropdown>
+          </div>
+          <div class="col-sm" style="display: flex; flex-direction: column; align-items: center;">
+              <h2>Psicólogos disponibles</h2>
+              <p-dropdown [options]="psychologyList" [(ngModel)]="psicologoSeleccionado" (onChange)="cambioPsycho($event)" placeholder="Selecciona un psicólogo" optionLabel="name"
+	              [showClear]="true">
+              </p-dropdown>
+          </div>
+        </div>
+        <hr>
+        <p-button [disabled]=completo (onClick)="solicitarCita()" label="Submit"></p-button>
+      </div>
+    </article>
+  </section>
+</section>

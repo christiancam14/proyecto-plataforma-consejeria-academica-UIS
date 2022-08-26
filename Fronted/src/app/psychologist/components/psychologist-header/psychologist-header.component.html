@@ -1,0 +1,96 @@
+<!-- MOBILE -->
+<div class="show-mobile sticky-top">
+  <div>
+    <a (click)="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </a>
+    <a id="logoUis">
+      <img
+        src="../../../../assets/img/logoUis.png"
+        height="30"
+        alt="UIS Logo"
+        loading="lazy"
+      />
+    </a>
+    <div>
+      <a *ngIf="!cookie" [routerLink]="['/psy-psychology/login']">
+        <i class="fa-solid fa-user"></i>
+      </a>
+    </div>
+  </div>
+  <div class="side-menu" [class.active]="activeMenu">
+    <a class="close-button" (click)="toggleMenu()">
+      <i class="fa-solid fa-xmark"></i>
+    </a>
+    <ul>
+      <li *ngIf="cookie">
+        <a [routerLink]="['/psy-psychology/appointments']" routerLinkActive="active">Citas</a>
+      </li>
+      <li *ngIf="cookie">
+        <a [routerLink]="['/psy-psychology/faqs']" routerLinkActive="active">Preguntas</a>
+      </li>
+      <li *ngIf="cookie">
+        <a [routerLink]="['/psy-psychology/faqs']" routerLinkActive="active">Vídeos</a>
+      </li>
+      <li *ngIf="cookie">
+        <a [routerLink]="['/psy-psychology/workshops']" routerLinkActive="active">Talleres</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- WEB AND TABLET -->
+<div id="header_web">
+  <div class="contenedor-1200">
+    <div class="hide-mobile sticky-top">
+      <div>
+        <nav>
+          <ul id="nav-menu">
+            <li>
+              <a  id="logoUis">
+                <img
+                  src="../../../../assets/img/logoUis.png"
+                  height="30"
+                  alt="UIS Logo"
+                  loading="lazy"
+                />
+              </a>
+            </li>
+            
+            <li *ngIf="cookie">
+              <a [routerLink]="['/psy-psychology/appointments']" routerLinkActive="active"
+                >Citas</a
+              >
+            </li>
+            <li *ngIf="cookie">
+              <a [routerLink]="['/psy-psychology/faqs']" routerLinkActive="active"
+                >Preguntas</a
+              >
+            </li>
+            <li *ngIf="cookie">
+              <a [routerLink]="['/psy-psychology/videos']" routerLinkActive="active"
+                >Vídeos</a
+              >
+            </li>
+            <li *ngIf="cookie">
+              <a [routerLink]="['/psy-psychology/workshops']" routerLinkActive="active">Talleres</a>
+            </li>
+            <li *ngIf="!cookie">
+              <button [routerLink]="['/psy-psychology/login']" class="btn btn-primary me-3">
+                Iniciar sesión
+              </button>
+            </li>
+            <li *ngIf="cookie">
+              <div>
+                <a [routerLink]="['/psy-psychology/profile']">
+                  <i class="fa-solid fa-user"></i>
+                </a>
+              </div>
+            </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
