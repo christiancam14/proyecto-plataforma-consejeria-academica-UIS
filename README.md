@@ -1,0 +1,2 @@
+# proyecto-plataforma-consejeria-academica-UIS
+Este repositorio contará con todos los recursos empleados en el desarrollo del proyecto de diseño de una plataforma tecnológica para la gestión administrativa del programa de consejería estudiantil de la Universidad industrial de Santander, desarrollador por Juan Pablo Viviescas, Christian Stiven Camacho Galvis, en compañía del ingeniero José Geralbert Rubiano y la doctora Diana Rubiela Ayala.
