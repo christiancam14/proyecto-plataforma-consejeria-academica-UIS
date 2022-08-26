@@ -15,10 +15,10 @@
             <tr style="height: 60px; ">
               <th style="padding-left: 20px;  color: white;">Id</th>
               <th style="padding-left: 20px;  color: white;">Psicólogo / (a)</th>
-              <th style="padding-left: 20px;  color: white;">Fecha creación</th>
+              <th class="fecha-creacion" style="padding-left: 20px;  color: white;">Fecha creación</th>
               <th style="padding-left: 20px;  color: white;">Fecha cita</th>
               <th style="padding-left: 20px;  color: white;">Hora</th>
-              <th style="padding-left: 20px;  color: white; padding-right: 40px;">Estado</th>
+              <th class="estado" style="padding-left: 20px;  color: white; padding-right: 40px;">Estado</th>
             </tr>
           </thead>
           <tbody>
@@ -27,13 +27,13 @@
               border-bottom: 1px solid #c2c2c2;">{{ cita.id  }}</td>
               <td style="padding: 10px 0 10px 20px;
               border-bottom: 1px solid #c2c2c2;">{{ cita.student?.name }}</td>
-              <td style="padding: 10px 0 10px 20px;
+              <td class="fecha-creacion" style="padding: 10px 0 10px 20px;
               border-bottom: 1px solid #c2c2c2;">{{ cita.date_request | date }}</td>
               <td style="padding: 10px 0 10px 20px;
               border-bottom: 1px solid #c2c2c2;">{{ cita.date_appointment | date }}</td>
               <td style="padding: 10px 0 10px 20px;
               border-bottom: 1px solid #c2c2c2;">{{ cita.date_appointment | date: "h:mm a" }}</td>
-              <td style="padding: 10px 0 10px 20px;
+              <td class="estado" style="padding: 10px 0 10px 20px;
               border-bottom: 1px solid #c2c2c2;">{{ cita.status_appointment }}</td>
             </tr>
           </tbody>

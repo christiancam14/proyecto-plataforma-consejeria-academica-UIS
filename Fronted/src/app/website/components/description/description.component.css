@@ -57,3 +57,16 @@
     margin-top: 30px;
   }
   
+  /* Media para tablet */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    
+  }
+
+  /* Media para movil */
+  @media (min-width: 0px) and (max-width: 767px) {
+    #description-program .steps{
+      flex-direction: column;
+    }  
+  }
+
+    

@@ -65,3 +65,19 @@
   align-items: center;
   margin-top: 30px;
 }
+
+/* Media para tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    
+}
+
+/* Media para movil */
+@media (min-width: 0px) and (max-width: 767px) {
+  #imgCard .steps{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    flex-direction: column;
+  }
+}

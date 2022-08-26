@@ -25,3 +25,17 @@
   #videos .videos-cargados p-card{
     margin: 10px;
   }
+
+  /* Media para tablet */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    
+  }
+
+  /* Media para movil */
+  @media (min-width: 0px) and (max-width: 767px) {
+    #videos .videos-cargados{
+      display: flex;
+      overflow: hidden;
+    }
+  
+  }

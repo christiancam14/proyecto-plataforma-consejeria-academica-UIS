@@ -105,3 +105,18 @@
     font-weight: bold;
     background-position: left;
 }
+
+  /* Media para tablet */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    
+}
+
+/* Media para movil */
+@media (min-width: 0px) and (max-width: 767px) {
+  #misCitas .fecha-creacion,
+  #misCitas .estado
+  {
+    display: none;
+  }
+
+}

@@ -64,10 +64,10 @@
             <tr style="height: 50px; ">
               <th style="padding-left: 20px;">Id</th>
               <th style="padding-left: 20px;">Taller</th>
-              <th style="padding-left: 20px;">Imagen</th>
+              <th class="imagen" style="padding-left: 20px;">Imagen</th>
               <th style="padding-left: 20px;">Descripción</th>
               <!-- <th style="padding-left: 20px;">Hora</th> -->
-              <th style="padding-left: 20px; padding-right: 40px;">Creado</th>
+              <th class="creado" style="padding-left: 20px; padding-right: 40px;">Creado</th>
               <th style="padding-right: 20px;">Eliminar</th>
             </tr>
           </thead>
@@ -77,7 +77,7 @@
               border-bottom: 1px solid #c2c2c2; min-height: 500px;">{{ curso.id  }}</td>
               <td style="padding: 10px 0 10px 20px;
               border-bottom: 1px solid #c2c2c2;">{{ curso.title }}</td>
-              <td style="padding: 10px 0 10px 20px;
+              <td class="imagen" style="padding: 10px 0 10px 20px;
               border-bottom: 1px solid #c2c2c2;">
                 <img width="80" [src]="curso.image" alt="">  
             </td>
@@ -85,7 +85,7 @@
               border-bottom: 1px solid #c2c2c2;     width: 200px;">{{ curso.body }}</td>
               <!-- <td style="padding: 10px 0 10px 20px;
               border-bottom: 1px solid #c2c2c2;">{{ curso.date_appointment | date: "h:mm a" }}</td> -->
-              <td style="padding: 10px 0 10px 20px;
+              <td class="creado" style="padding: 10px 0 10px 20px;
               border-bottom: 1px solid #c2c2c2;">{{ curso.updated_at | date: "d/m/y" }}</td>
               <td style="padding: 10px 0 10px 20px;
               border-bottom: 1px solid #c2c2c2;"><button class="eliminar-curso" (click)="eliminarCurso(curso.id)" >X</button></td>

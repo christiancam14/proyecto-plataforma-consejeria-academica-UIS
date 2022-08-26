@@ -99,3 +99,28 @@
   #workshop-cards  .imagen-port:hover .hover-galeria{
     transform: scale(1.2);
   }
+
+  /* Media para tablet */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    
+  }
+
+  /* Media para movil */
+  @media (min-width: 0px) and (max-width: 767px) {
+    #workshop-cards .content .cards{
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      border: none;
+      margin: 0 auto;
+      white-space: nowrap;
+      overflow-x: auto;
+      align-items: center;
+    }
+
+    #workshop-cards .content .cards .card{
+      width: 90%;
+      height: auto;
+      border: none;
+    }
+  }
