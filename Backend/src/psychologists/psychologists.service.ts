@@ -46,33 +46,6 @@ export class PsychologistsService {
     }
   }
 
-  async allfree() {
-    try {
-      const psychos = await prisma.psychology.findMany({
-        select: {
-          id: true,
-          name: true,
-          email: true,
-          phone: true,
-          city: true,
-          code_psychology: true,
-          office: true,
-          active: true,
-          rating_average: true,
-          appointments_number: true,
-        },
-      });
-      if (!psychos[0]) return { message: 'No psychologists found' };
-      return psychos;
-    } catch (error) {
-      return { message: 'Failed ' + error };
-    }
-  }
-
-
-
-
-
   async create(createPsychologistDto: CreatePsychologistDto) {
     try {
       if (!(await this.authSuperuser(createPsychologistDto.auth_token)))

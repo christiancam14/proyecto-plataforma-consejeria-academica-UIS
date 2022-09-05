@@ -40,7 +40,7 @@ export class FrequentQuestionsController {
     return this.frequentQuestionsService.findOne(+id);
   }
 
-  @Post('/delete-answer/')
+  @Delete()
   remove(@Body() deleteFrequentQuestionDto: DeleteFrequentQuestionDto) {
     return this.frequentQuestionsService.remove(deleteFrequentQuestionDto);
   }

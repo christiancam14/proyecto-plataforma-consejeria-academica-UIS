@@ -22,11 +22,6 @@ export class PsychologistsController {
     return this.psychologistsService.all(payload);
   }
 
-  @Get('/allfree')
-  allfree(@Body() payload: {  } ) {
-    return this.psychologistsService.allfree();
-  }
-
   @Post()
   create(@Body() createPsychologistDto: CreatePsychologistDto) {
     return this.psychologistsService.create(createPsychologistDto);
