@@ -60,7 +60,7 @@ export class StudentsController {
     return this.studentsService.all(payload);
   }
 
-  @Patch()
+  @Post('/update')
   @ApiTags('Student')
   update(@Body() updateStudentDto: UpdateStudentDto) {
     return this.studentsService.update(updateStudentDto);
